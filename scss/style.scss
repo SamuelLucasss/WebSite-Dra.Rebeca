@@ -1,0 +1,837 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+$fontLogo: 'EB Garamond', sans-serif;
+$fontPoppins: 'Poppins', sans-serif;
+
+$goldColor: #cea86b;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(249, 249, 249);
+    width: 100%;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: white;
+    font-weight: 500;
+}
+
+// INICIO HEADER
+.header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 4px 1px rgba(27, 26, 26, 0.319);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1A1A1A;
+    
+    .logo {
+        font-family: $fontLogo;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: italic;
+        color: $goldColor;
+        margin-left: 40px;
+
+        .rebeca {
+            font-size: 1.9rem;
+        }
+    }
+
+    .nav-menu {
+        list-style: none;
+        margin-right: 40px;
+        display: flex;
+        gap: 15px;
+
+        a {
+            color: $goldColor;
+            font-size: 18px;
+            font-family: $fontPoppins;
+            position: relative;
+            padding: 0 5px;
+        }
+
+        a::after {
+            content: " ";
+            width: 0;
+            height: 2px;
+            background-color: $goldColor;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.4s ease-in-out;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+    }
+}
+// FIM HEADER
+
+// INICIO MAIN
+.hero::before {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/img/background.jpg");
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    filter: saturate(120%);
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    padding: 30px 60px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    
+
+    .hero-text {
+        width: 100%;
+        height: 500px;
+        font-family: $fontPoppins;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        
+        .boasVindas {
+            text-align: center;
+            color: whitesmoke;
+        }
+
+        h1 {
+            font-size: 3.1rem;
+            font-weight: 500;
+            text-align: center;
+            line-height: 100%;
+            color: $goldColor;
+            margin-top: 15px;
+
+            .quebrah1 {
+                font-size: 3.6rem;
+            }
+        }
+
+        .chamada {
+            max-width: 500px;
+            text-align: center;
+            margin-top: 15px;
+            position: relative;
+            left: 30px;
+            line-height: 120%;
+            color: whitesmoke;
+        }
+    }
+}
+// FIM MAIN
+
+// INICIO SOBRE
+.about {
+    width: 100%;
+    height: 700px;
+    background-color: $goldColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    font-family: $fontPoppins;
+    color: aliceblue;
+
+    .imgAbout {
+        img {
+            width: 400px;
+            clip-path: circle(40%);
+        }
+    }
+
+    .about-text {
+        width: 600px;
+        margin-bottom: 25px;
+
+        h2 {
+           font-size: 3.3rem; 
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 140%;
+            text-align: justify;
+            margin-top: 20px;
+        }
+    }
+}
+// FIM SOBRE 
+
+// INICIO SERVIÇOS
+.services {
+    font-family: $fontPoppins;
+    width: 100%;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 500;
+        padding: 0 0 30px 0;
+        color: #1A1A1A;
+
+        .icons {
+            width: 50px;
+        }
+    }
+}
+
+.services-container {
+    width: 100%;
+    display: flex;
+    flex-grow: inherit;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// INICIO FACETAS EM RESINA
+
+.bg-resina {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+
+}
+
+.bg-resina::before {
+    content: " ";
+    background-image: url("../assets/img/faceta-dentária-post-blog.jpg");
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.text-resina {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    transition: 1s;
+    color: white;
+    
+
+    h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-top: 15px;
+        text-align: justify;
+        text-indent: 15px;
+        padding: 0 15px;
+        display: none;
+    }
+
+    .icons-services {
+        width: 80px;
+        margin-top: 25px;
+        filter: invert(1);
+    }
+}
+
+.text-resina:hover {
+    top: -10px;
+    p {
+        display: block;
+    }
+    h3 {
+        font-weight: 600;
+        color: whitesmoke;
+    }
+}
+// FIM FACETAS EM RESINA
+
+// INICIO CLAREAMENTO
+.bg-clareamento {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 5px;
+    color: white;
+}
+
+.bg-clareamento::before {
+    content: " ";
+    background-image: url("../assets/img/clareamento.webp");
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.text-clareamento {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    transition: 1s;
+
+    h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-top: 15px;
+        text-align: justify;
+        text-indent: 15px;
+        padding: 0 15px;
+        display: none;
+    }
+
+    .icons-services {
+        width: 80px;
+        margin-top: 25px;
+        filter: invert(1);
+    }
+}
+
+.text-clareamento:hover {
+    top: -10px;
+    p {
+        display: block;
+    }
+
+    h3 {
+        font-weight: 600;
+        color: whitesmoke;
+    }
+}
+// FIM CLAREAMENTO
+
+// INICIO PREENCHIMENTO LABIAL
+.bg-preenchimento {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    border-radius: 5px;
+}
+
+.bg-preenchimento::before {
+    content: " ";
+    background-image: url("../assets/img/preenchimento-bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.text-preenchimento {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    transition: 1s;
+    
+    h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-top: 15px;
+        text-align: justify;
+        text-indent: 15px;
+        padding: 0 15px;
+        display: none;
+    }
+
+    .icons-services {
+        width: 80px;
+        margin-top: 25px;
+        filter: invert(1);
+    }
+}
+
+.text-preenchimento:hover {
+    top: -10px;
+    p {
+        display: block;
+    }
+
+    h3 {
+        font-weight: 600;
+        color: whitesmoke;
+    }
+}
+// FIM PREENCHIMENTO LABIAL
+
+// INICIO BOTOX
+.bg-botox {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    border-radius: 5px;
+}
+
+.bg-botox::before {
+    content: " ";
+    background-image: url("../assets/img/botox-bg.png");
+    background-size: cover;
+    background-position: center bottom;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+.text-botox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    transition: 1s;
+    
+    h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-top: 15px;
+        text-align: justify;
+        text-indent: 15px;
+        padding: 0 15px;
+        display: none;
+    }
+
+    .icons-services {
+        width: 80px;
+        margin-top: 25px;
+        filter: invert(1);
+    }
+}
+
+.text-botox:hover {
+    top: -10px;
+    p {
+        display: block;
+    }
+
+    h3 {
+        font-weight: 600;
+        color: whitesmoke;
+    }
+}
+// FIM BOTOX
+
+.inf {
+    font-size: 18px;
+    font-family: $fontPoppins;
+    margin-left: 40px;
+    position: relative;
+    top: 40px;
+    
+    a {
+        color: #144369;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+}
+// FIM SERVIÇOS
+
+// INICIO RESULTADOS
+.slider-content {
+    background-color: $goldColor;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-family: $fontPoppins;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-align: center;
+        color: whitesmoke;
+    }
+}
+
+.container-slider {
+    margin: 20px auto 0 auto;
+    width: 500px;
+    height: 450px;
+    overflow: hidden;
+
+    h1 {
+        font-family: $fontPoppins;
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .slides {
+        display: flex;
+        width: 400%;
+        height: 450px;
+
+        input {
+            display: none;
+        }
+    }
+
+    .slide {
+        width: 25%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .nav-manual {
+        width: 500px;
+        position: absolute;
+        margin-top: -30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn {
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .manual-btn:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    #radio1:checked ~ .first {
+        margin-left: 0;
+    }
+    #radio2:checked ~ .first {
+        margin-left: -25%;
+    }
+    #radio3:checked ~ .first {
+        margin-left: -50%;
+    }
+    #radio4:checked ~ .first {
+        margin-left: -75%;
+    }
+
+    .nav-automatica div {
+        border: 2px solid white;
+        padding: 5px;
+        border-radius: 50%;
+    }
+    .nav-automatica div:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .nav-automatica {
+        width: 500px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        margin-top: 420px;
+    }
+
+    #radio1:checked ~ .nav-automatica .auto-btn1 {
+        background-color: white;
+    }
+    #radio2:checked ~ .nav-automatica .auto-btn2 {
+        background-color: white;
+    }
+    #radio3:checked ~ .nav-automatica .auto-btn3 {
+        background-color: white;
+    }
+    #radio4:checked ~ .nav-automatica .auto-btn4 {
+        background-color: white;
+    }
+}
+// FIM RESULTADOS
+
+// INICIO RELATOS
+.relatos-container {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 2.5rem;
+        font-family: $fontPoppins;
+        font-weight: 500;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #1A1A1A;
+
+        .relato-icon {
+            width: 40px;
+        }
+    }
+}
+
+.relatos-boxs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 20px;
+
+    .relatos-content {
+        width: 300px;
+        height: 300px;
+        background-color: whitesmoke;
+        padding: 20px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        .estrela {
+            width: 150px;
+        }
+    
+        p {
+            font-size: 0.9rem;
+            font-family: $fontPoppins;
+            text-align: justify;
+        }
+    
+        .name-relato {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .nome-paciente {
+                font-family: $fontPoppins;
+                font-weight: 600;
+                font-size: 1.3rem;
+                color: #1A1A1A;
+                
+            }
+    
+            .aspas {
+                width: 50px;
+            }
+        }
+    }
+}
+// FIM RELATOS
+
+// INICIO JOB
+.job {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h2 {
+        font-family: $fontPoppins;
+        padding: 40px 20px;
+        text-align: center;
+        font-weight: 500;
+        line-height: 130%;
+        background-color: whitesmoke;
+        
+        a {
+            color: #144369;
+        }
+    }
+
+    .mundi {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        gap: 15px;
+        justify-content: space-around;
+        padding: 20px 25px;
+        
+        img {
+            width: 50%;
+            border-radius: 3px;
+            filter: contrast(120%);
+        }
+
+        iframe {
+            width: 50%;
+            height: 100%;
+        }
+    }
+
+    span {
+        font-family: $fontPoppins;
+        font-size: 1rem;
+        padding-bottom: 30px;
+    }
+}
+// FIM JOB
+
+// INICIO FOOTER
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .footer-icons {
+        width: 30px;
+        height: 25px;
+        z-index: 2;
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer-icons a i {
+        color: #E9C32B;
+        position: relative;
+        top: 80px;
+        right: 17px;
+    }
+
+    img {
+        filter: saturate(180%);
+        width: 350px;
+    }
+
+    span {
+        font-family: $fontPoppins;
+        position: relative;
+        bottom: 50px;
+    }
+}
+// FIM FOOTER
+
+// INICIO BTN WHATSAPP
+.btn-whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 14px;
+    z-index: 99;
+
+    img {
+        max-width: 74px;
+        transition: transform 0.4s;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .hidden-text {
+    width: 200px;
+    color: white;
+    font-family: $fontPoppins;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 3px;
+    position: absolute;
+    right: 85px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.btn-whatsapp:hover {
+    .hidden-text {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.hero-text, .imgAbout, .about-text,
+.slider-content, .mundi {
+    visibility: hidden;
+}
+// FIM BTN WHATSAPP
+
+
+
+
+
+
+
+
